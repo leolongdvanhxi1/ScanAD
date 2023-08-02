@@ -1,0 +1,46 @@
+PingcastleID                  Name                                 											Level
+
+A-WeakRSARootCert2            Check for Certificates using a relatively weak signing algorithm (RSA between 1024 bits and 2048 or expires after 2030) Critical
+A-WeakRSARootCert2            Check for Certificates using a relatively weak signing algorithm (RSA between 1024 bits and 2048 or expires after 2030) Medium
+A-SHA1IntermediateCert        Check for Intermediate Certificates using unsafe hashing algorithm (SHA1)                                               Critical
+A-SHA1IntermediateCert        Check for Intermediate Certificates using unsafe hashing algorithm (SHA1)                                               Medium
+A-SHA1RootCert                Check for Root Certificates using unsafe hashing algorithm (SHA1)                                                       Critical
+A-SHA1RootCert                Check for Root Certificates using unsafe hashing algorithm (SHA1)                                                       Medium
+T-SIDFiltering                Check for Trusts whose security is not maximum                                                                          Critical
+A-CertROCA                    Check for the ROCA vulnerability in certificates                                                                        Critical
+A-CertROCA                    Check for the ROCA vulnerability in certificates                                                                        Medium
+A-DnsZoneUpdate1              Check if DNS Zones are configured with insecure update.                                                                 Critical
+A-DnsZoneUpdate1              Check if DNS Zones are configured with insecure update.                                                                 Medium
+P-ServiceDomainAdmin          Check if Service Accounts (aka accounts with never expiring password) are domain administrators                         Critical
+P-Kerberoasting               Check if admin accounts are vulnerable to the Kerberoast attack.                                                        Critical
+S-DC-Inactive                 Check if all DC are active.                                                                                             Critical
+S-DCRegistration              Check if all DC are well registered.                                                                                    Critical
+P-DelegationDCt2a4d           Check if all DC have no constrained delegation with protocol transition.                                                Critical
+S-NoPreAuthAdmin              Check if all admin accounts require Kerberos pre-authentication                                                         Critical
+P-AdminPwdTooOld              Check if all admin passwords are changed on the field.                                                                  Critical
+A-CertTempCustomSubject       Check if authentication certificate templates allow users to control the subject                                        Critical
+A-CertTempAnyone              Check if certificate templates can be edited by everyone.                                                               Critical
+A-DsHeuristicsLDAPSecurity    Check if the mitigation for CVE-2021-42291 has been enabled                                                             Critical
+A-DsHeuristicsLDAPSecurity    Check if the mitigation for CVE-2021-42291 has been enabled                                                             High
+A-DsHeuristicsLDAPSecurity    Check if the mitigation for CVE-2021-42291 has been enabled                                                             Medium
+A-CertTempAgent               Check the permission of agent certificate templates                                                                     Critical
+A-CertTempAnyPurpose          Check the purpose provided by certificate templates                                                                     Critical
+P-DisplaySpecifier            Ensure that custom Display Specifiers are stored in SYSVOL                                                              Critical
+S-FunctionalLevel3            Ensure that the functional level of the domain and the forest are up to date to use the latest security features        Critical
+S-FunctionalLevel3            Ensure that the functional level of the domain and the forest are up to date to use the latest security features        Medium
+A-PreWin2000Anonymous         Check for Windows 2000 compatibility which allows access to the domain without any account                              High
+T-Inactive                    Check for inactive trusts                                                                                               High
+A-MinPwdLen                   Check for short password length in password policy                                                                      High
+T-SIDHistoryDangerous         Check if dangerous SID are stored in the SIDHistory attribute.                                                          High
+S-PwdNeverExpires             Check that there is no account with never-expiring passwords                                                            High
+S-DesEnabled                  Check the use of Kerberos with weak encryption (DES algorithm)                                                          High
+A-Krbtgt                      Mitigate golden ticket attack via a regular change of the krbtgt password                                               High
+P-DNSAdmin                    Check if the Dns Admins group is not empty                                                                              Low
+P-DCOwner                     At least one domain controller is not owned correctly                                                                   Medium
+A-ReversiblePwd               Check for GPO which enables reversible passwords                                                                        Medium
+S-C-PrimaryGroup              Check for hidden group membership for computer accounts                                                                 Medium
+T-SIDHistorySameDomain        Check for local backdoor stored in SID History                                                                          Medium
+A-UnixPwd                     Check if attributes unixUserPassword and userPassword are set                                                           Medium
+A-PreWin2000Other             Check that the "Pre-Windows 2000 Compatible Access" group has not been modified from its default                        Medium
+P-RODCAllowedGroup            Check the Allowed RODC Password Replication Group group                                                                 Medium
+P-RODCDeniedGroup             Check the Denied RODC Password Replication Group group                                                                  Medium
